@@ -1,0 +1,24 @@
+[project]
+name = "hackacity-2024"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.8"
+description = "Open source data anonymization for Hackacity 2024"
+authors = [
+    {name = "Ariana Osório<arianaosorio.93@gmail.com>"}
+]
+dependencies = ["pandas", "numpy", "matplotlib", "scipy"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pylint", "pytest-cov", "pre-commit==3.3.3"]
+
+[tool.setuptools]
+packages = ["hackacity"]
+
+[tool.coverage.run]
+omit = [
+    "*/conftest.py", "*/test*", # omit test files
+]
+
+[tool.coverage.report]
+fail_under = 80
